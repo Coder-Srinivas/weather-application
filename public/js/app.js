@@ -3,10 +3,11 @@ console.log("Client Side Javascript");
 const button = document.querySelector("button");
 const input = document.querySelector("input");
 const forecast = document.getElementById("forecast");
+const location = document.getElementById("location")
 
 button.onclick = (event) => {
   event.preventDefault();
-  forecast.innerHTML = "Loading...";
+  location.innerHTML = "Loading...";
   const address = input.value;
 
   const url = "/weather?address=" + address;
@@ -14,8 +15,10 @@ button.onclick = (event) => {
   fetch(url).then((response) => {
     response.json().then((data) => {
       if (data.error) {
-        forecast.innerHTML = data.error;
-      } else forecast.innerHTML = data.forecast;
+        location.innerHTML = data.error;
+      } else {
+          location.innerHTML = data.location;
+          forecast.innerHTML = data.forecast;}
     });
   });
 };
