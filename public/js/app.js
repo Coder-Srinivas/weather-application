@@ -1,13 +1,13 @@
-console.log("Client Side Javascript");
+// console.log("Client Side Javascript");
 
 const button = document.querySelector("button");
 const input = document.querySelector("input");
 const forecast = document.getElementById("forecast");
-const location = document.getElementById("location")
+const loc = document.getElementById("location");
 
 button.onclick = (event) => {
   event.preventDefault();
-  location.innerHTML = "Loading...";
+  loc.innerHTML = "Loading...";
   const address = input.value;
 
   const url = "/weather?address=" + address;
@@ -15,9 +15,9 @@ button.onclick = (event) => {
   fetch(url).then((response) => {
     response.json().then((data) => {
       if (data.error) {
-        location.innerHTML = data.error;
+        loc.innerHTML = data.error;
       } else {
-          location.innerHTML = data.location;
+          loc.innerHTML = data.location;
           forecast.innerHTML = data.forecast;}
     });
   });
