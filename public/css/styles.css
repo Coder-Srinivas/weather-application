@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+  color: blue;
+}
+img {
+  display: block;
+  height: 25em;
+  width: 25em;
+  margin: auto;
+}
+body {
+  align-items: center;
+}
+p {
+  color: white;
+  text-align: center;
+}
