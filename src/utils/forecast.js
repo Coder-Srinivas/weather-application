@@ -6,7 +6,7 @@ const forecast = (latitude, longitude, callback) => {
     latitude +
     "&lon=" +
     longitude +
-    "&exclude=hourly,daily&units=metric&APPID=e6bc9a6428a00d954f3d51def44accf1";
+    "&exclude=hourly&units=metric&APPID=e6bc9a6428a00d954f3d51def44accf1";
 
   request({ url: url, json: true }, (error, response) => {
     if (error) {
@@ -15,13 +15,17 @@ const forecast = (latitude, longitude, callback) => {
       callback("Unable to find location", undefined);
     } else {
       const data = response.body;
+      console.log(data.current.weather)
       callback(
         undefined,
-        "Current Temperature is " +
+        "Current weather is " + data.current.weather[0].description + 
+        ".  Current Temperature is " +
           data.current.temp +
-          " degrees Celsius. There is a " +
-          data.minutely[data.minutely.length - 1].precipitation +
-          "% chance of rain"
+          " degrees Celsius. \n"
+          +"  Perceived Temperature " + data.current.feels_like + " degrees Celsius. " + "\n"
+          + "  Humidity is " + data.current.humidity + "%. " + "\n"
+          + "  Pressure is " + data.current.pressure + "hPa. " + "\n"
+          + "  Wind Speed is " + data.current.wind_speed + "km/h. "
       );
     }
   });

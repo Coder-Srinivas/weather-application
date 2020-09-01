@@ -7,7 +7,8 @@ const loc = document.getElementById("location");
 
 button.onclick = (event) => {
   event.preventDefault();
-  loc.innerHTML = "Loading...";
+  loc.textContent = "Loading...";
+  forecast.textContent = "";
   const address = input.value;
 
   const url = "/weather?address=" + address;
@@ -15,10 +16,10 @@ button.onclick = (event) => {
   fetch(url).then((response) => {
     response.json().then((data) => {
       if (data.error) {
-        loc.innerHTML = data.error;
+        loc.textContent = data.error;
       } else {
-          loc.innerHTML = data.location;
-          forecast.innerHTML = data.forecast;}
+          loc.textContent = data.location;
+          forecast.textContent = data.forecast;}
     });
   });
 };

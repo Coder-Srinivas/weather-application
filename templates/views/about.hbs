@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
-    <link rel="stylesheet" type = "text/css" href="/css/styles.css">
-    <script src="/js/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
 </head>
+
 <body>
-    {{>header}}
-    <img src = "/img/WhatsApp Image 2020-05-28 at 3.38.05 PM.jpeg">
-    <br>
+    <div class="main-content">{{>header}}
+        <img src="/img/img.jpeg">
+        <br>
+        <p> Created using the Mapbox API and OpenWeather API. </p>
+        <p> The address is first passed to Mapbox API which converts the given location into it's corresponding latitude
+            and longitude. The latitude and longitude are then passed to OpenWeather API which get the
+            weather info of the respective co-ordinates.</p>
+        <p> For more info on how the website works, check out my code at this <a href="https://github.com/Coder-Srinivas/weatherWebsite">GitHub repo </a></p>
+    </div>
+
     {{>footer}}
 </body>
+
 </html>

@@ -1,17 +1,33 @@
-h1 {
-  text-align: center;
-  color: blue;
+h1{
+  color: orange
 }
-img {
-  display: block;
-  height: 25em;
-  width: 25em;
-  margin: auto;
+body{
+  color: #000;
+  font-family:sans-serif;
+  max-width: 650px;
+  margin:0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-body {
-  align-items: center;
+
+.main-content{
+  flex-grow: 1;
 }
-p {
-  color: white;
-  text-align: center;
+
+button{
+  cursor:pointer
+}
+img{
+  width: 25vw;
+  height: 50vh;
+  padding-top: 20px;
+}
+
+footer{
+  border-top: 2px solid #eeeeee;
+  color: #888888;
+  margin-top: 16px;
+  padding: 16px 0;
 }
