@@ -13,7 +13,8 @@ Type in your query in the search box and wait for it to surprise you.
 Created using the Mapbox API and OpenWeather API. The address is first passed to Mapbox API which converts the given location into
 it's corresponding latitude and longitude. The latitude and longitude are then passed to OpenWeather API which get the weather
 info of the respective co-ordinates.
- 
+
+<h2 id='own'> Owning the project </h2>
 Make this project your own by following the below steps : 
 
 - Fork the repo and make it your own.
