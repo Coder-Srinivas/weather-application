@@ -17,8 +17,17 @@ info of the respective co-ordinates.
 Make this project your own by following the below steps : 
 
 - Fork the repo and make it your own.
-- Clone your remote repo by either using Secure Shell (SSH) or HTTPS link, using the command
+- Clone your remote repo by either using Secure Shell (SSH) or HTTPS link, using the command.
 
 ```
 git clone https://github.com/your-github-username/weather-application.git
 ```
+- Enchance the application or edit it.
+- Add and commit your changes to the git repository using the commands
+```
+git add .
+git commit -m "Your enchanced feature"
+```
+- Enjoy, The project now is all yours.
+
+Consider staring it if you like the application.
