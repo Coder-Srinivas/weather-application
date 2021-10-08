@@ -2,6 +2,7 @@
 
 
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://srinivas-weather-application.herokuapp.com/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 Application which fetches weather from any location on the world. 
 Type in your query in the search box and wait for it to surprise you.
